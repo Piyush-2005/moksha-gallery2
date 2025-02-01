@@ -2,22 +2,22 @@ import React from "react";
 import Background from "./components/background";
 import Title from "./components/Title";
 import Portal from "./components/Portal";
-// import Crystals from "./components/Crystals";
+import Rocks from "./components/Blackrock";
 import TreeShadow from "./components/TreeShadow";
 import Mist from "./components/Mist";
 import Arrows from "./components/Arrows";
-import Blackrock from "./components/Blackrock";
 
 function App() {
   return (
-    <div className="relative h-screen w-full flex justify-center items-center overflow-hidden">
-      <Background />
+    <div className="relative min-h-screen w-full flex justify-center items-center overflow-hidden">      <Background />
       <Title />
       <TreeShadow />
       {/* <Crystals /> */}
-      <Portal />
+      <Rocks />
+      <div className="w-full max-w-5xl flex justify-center items-center">
+        <Portal/>
+      </div>
       <Mist />
-      <Blackrock/>
       <Arrows />
     </div>
   );
