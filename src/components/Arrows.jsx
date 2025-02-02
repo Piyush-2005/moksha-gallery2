@@ -31,17 +31,6 @@
 //   );
 // }
 
-// import leftArrow from '../assets/left-arrow.png';
-// import rightArrow from '../assets/right-arrow.png';
-
-// export default function Arrows() {
-//   return (
-//     <div className="absolute bottom-0 left-[46rem] transform -translate-x-1/2 flex -gap-4 z-20">
-//       <img src={leftArrow} alt="Left Arrow" className="w-100 cursor-pointer" />
-//       <img src={rightArrow} alt="Right Arrow" className="w-100 cursor-pointer" />
-//     </div>
-//   );
-// }
 
 
 import leftArrow from '../assets/left-arrow.png';
