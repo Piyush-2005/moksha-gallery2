@@ -57,7 +57,7 @@ export default function Arrows() {
         alt="Left Arrow" 
         // className="w-[60vw] min-w-[200px] max-w-[300px] h-[68vh] min-h-[40px] max-h-[200px] cursor-pointer"
         onClick={() => handleClick("left")}
-        className={`w-36 sm:w-48 md:w-64 lg:w-96 cursor-pointer transition duration-300 ${
+        className={`w-36 sm:w-64 md:w-64 lg:w-96 cursor-pointer transition duration-300 ${
           clickedArrow === "left" ? "drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]" : ""
         }`}
       />
@@ -67,7 +67,7 @@ export default function Arrows() {
         alt="Right Arrow" 
         onClick={() => handleClick("right")}
         // className="w-[60vw] min-w-[200px] max-w-[300px] h-[68vh] min-h-[40px] max-h-[200px] cursor-pointer"
-        className={`w-32 sm:w-48 md:w-64 lg:w-96 cursor-pointer transition duration-300 ${
+        className={`w-32 sm:w-64 md:w-64 lg:w-96 cursor-pointer transition duration-300 ${
           clickedArrow === "right" ? "drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]" : ""
         }`}
       />
