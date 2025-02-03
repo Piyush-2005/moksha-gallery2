@@ -1,23 +1,5 @@
 // import blueCrystalsLeft from '../assets/blue-crystals-left.png';
 // import blueCrystalsRight from '../assets/blue-crystals-right.png';
-
-// import portalImg from '../assets/portal.png';
-
-// export default function Portal() {
-//   return (
-//     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-//       <img src={portalImg} alt="Glowing Portal" className="w-[450px] h-[450px] animate-pulse" />
-//       <img src={blueCrystalsLeft} alt="Blue Crystals Left" className="absolute -left-16 bottom-0 w-40 z-20" />
-//             <img src={blueCrystalsRight} alt="Blue Crystals Right" className="absolute -right-12 bottom-0 w-40 z-20" />
-           
-//     </div>
-//   );
-// }
-
-
-
-// import blueCrystalsLeft from '../assets/blue-crystals-left.png';
-// import blueCrystalsRight from '../assets/blue-crystals-right.png';
 // import portalImg from '../assets/portal.png';
 
 // export default function PortalWithCrystals() {
@@ -48,29 +30,96 @@
 // }
 
 
+// import blueCrystalsLeft from '../assets/blue-crystals-left.png';
+// import blueCrystalsRight from '../assets/blue-crystals-right.png';
+// import portalImg from '../assets/portal.png';
+
+// export default function PortalWithCrystals() {
+//   return (
+//     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 flex justify-center items-center pointer-events-none">
+//       <img 
+//         src={portalImg} 
+//         alt="Glowing Portal" 
+//         className="w-[min(40vw,50vh)] min-w-[300px] max-w-[600px] h-auto animate-pulse-slow"
+//       />
+//       <img 
+//         src={blueCrystalsLeft} 
+//         alt="Blue Crystals Left" 
+//         className="absolute left-[-14%] bottom-[-1%] w-[35%] max-w-[120px] z-20"
+//       />
+//       <img 
+//         src={blueCrystalsRight} 
+//         alt="Blue Crystals Right" 
+//         className="absolute right-[-8%] bottom-[-1%] w-[35%] max-w-[120px] z-20"
+//       />
+//     </div>
+//   );
+// }
+
+
+
 import blueCrystalsLeft from '../assets/blue-crystals-left.png';
 import blueCrystalsRight from '../assets/blue-crystals-right.png';
 import portalImg from '../assets/portal.png';
 
 export default function PortalWithCrystals() {
   return (
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 flex justify-center items-center">
-<img 
-  src={portalImg} 
-  alt="Glowing Portal" 
-  className="w-[min(30vw, 35vh)] min-w-[200px] max-w-[350px] h-auto animate-pulse"
-/>
-<img 
-  src={blueCrystalsLeft} 
-  alt="Blue Crystals Left" 
-  className="absolute left-[-14%] bottom-[-1%] w-[35%] max-w-[120px] z-20"
-/>
-<img 
-  src={blueCrystalsRight} 
-  alt="Blue Crystals Right" 
-  className="absolute right-[-8%] bottom-[-1%] w-[35%] max-w-[120px] z-20"
-/>
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 flex justify-center items-center pointer-events-none">
+      {/* Portal Base */}
+      <div className="relative w-[min(55vw,60vh)] min-w-[300px] max-w-[600px]">
+        {/* Starburst Container */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="starburst" />
+        </div>
+        
+        {/* Portal Image */}
+        <img 
+          src={portalImg} 
+          alt="Glowing Portal" 
+          className="w-full h-auto animate-pulse-slow z-40 relative"
+        />
 
+        {/* Gallery Image Positioner */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full flex items-center justify-center z-50">
+          {/* This div will be used to position gallery images */}
+          <div className="w-[60%] h-[60%] relative" id="gallery-position" />
+        </div>
+
+        {/* Crystals */}
+        <img 
+          src={blueCrystalsLeft} 
+          alt="Blue Crystals Left" 
+          className="absolute left-[-14%] bottom-[0%] w-[35%] max-w-[120px] z-50"
+          style={{
+            filter: "drop-shadow(20px 30px 15px rgba(0,0,0,1))"
+          }}
+        />
+        <img 
+          src={blueCrystalsRight} 
+          alt="Blue Crystals Right" 
+          className="absolute right-[-8%] bottom-[0%] w-[35%] max-w-[120px] z-50"
+          style={{
+            filter: "drop-shadow(30px 30px 15px rgba(0,0,0,1))"
+          }}
+        />
+      </div>
     </div>
   );
 }
+
+
+// export default function PortalWithCrystals() {
+//   return (
+//     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none w-[300px] h-[300px]">
+//       {/* Starburst Container */}
+//       <div className="starburst-container">
+//         <div className="starburst" />
+//       </div>
+
+//       {/* Image Display Area */}
+//       <div className="absolute inset-0 flex items-center justify-center z-30">
+//         <div className="w-full h-full" id="image-container" />
+//       </div>
+//     </div>
+//   );
+// }

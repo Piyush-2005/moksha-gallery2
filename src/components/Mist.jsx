@@ -1,7 +1,22 @@
+import { motion } from 'framer-motion';
 import mistImg from '../assets/mist.png';
 
 export default function Mist() {
   return (
-    <img src={mistImg} alt="Mist" className="absolute bottom-0 w-full opacity-75 z-15" />
+    <motion.img 
+      src={mistImg} 
+      alt="Mist" 
+      className="absolute bottom-0 w-full opacity-75 z-15 pointer-events-none"
+      initial={{ opacity: 0 }}
+      animate={{ 
+        opacity: [0.4, 0.7, 0.4],
+        scale: [1, 1.05, 1]
+      }}
+      transition={{ 
+        duration: 8, 
+        repeat: Infinity,
+        ease: "easeInOut"
+      }}
+    />
   );
 }
