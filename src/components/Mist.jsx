@@ -9,11 +9,11 @@ export default function Mist() {
       className="absolute bottom-0 w-full opacity-75 z-15 pointer-events-none"
       initial={{ opacity: 0 }}
       animate={{ 
-        opacity: [0.4, 0.7, 0.4],
+        opacity: [0.8, 1, 0.8],
         scale: [1, 1.05, 1]
       }}
       transition={{ 
-        duration: 8, 
+        duration: 6, 
         repeat: Infinity,
         ease: "easeInOut"
       }}

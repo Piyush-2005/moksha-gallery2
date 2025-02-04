@@ -2,8 +2,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 400px; /* Increased size */
-  height: 400px; /* Increased size */
+  width: 400px; 
+  height: 400px; 
   background: conic-gradient(
     rgba(0, 127, 255, 0.9) 0deg,
     rgba(0, 191, 255, 0.6) 90deg,
@@ -13,9 +13,9 @@
   );
   animation: rotate-rays 3s linear infinite;
   transform: translate(-50%, -50%);
-  filter: blur(60px); /* Increased blur */
-  opacity: 1; /* Ensure visibility */
-  z-index: 30; /* Place above the portal */
+  filter: blur(60px); 
+  opacity: 1; 
+  z-index: 0; 
 }
 
 @keyframes rotate-rays {
@@ -26,3 +26,12 @@
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
+@keyframes rotate {
+  from { 
+    transform: translate(-50%, -50%) rotate(0deg); 
+  }
+  to { 
+    transform: translate(-50%, -50%) rotate(360deg); 
+  }
+}
+
